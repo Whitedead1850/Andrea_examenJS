@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Woord Vervangen</title>
+</head>
+
+<body>
+    <h1>Vervang het woord</h1>
+    <form name="formulier">
+        <label for="fname">Zin:</label><br>
+        <input type="text" id="zin" name="zin"><br>
+        <label for="lname">Zoek dit woord:</label>
+        <input type="text" id="woord" name="woord"><br>
+        <label for="lname">Dit woord komt in de plaats:</label>
+        <input type="text" id="nieuwwoord" name="nieuwwoord"><br>
+        <input type="button" value="vervang" onclick="vervangWoord()"><br>
+        <label for="lname">De nieuwe zin:</label><br>
+        <input type="text" id="nieuwezin" name="nieuwezin">
+    </form>
+    <script>
+        function vervangWoord() {
+            var zin = document.formulier.zin.value;
+            var woord = document.formulier.woord.value;
+            var lengte = woord.length;
+            var nieuwWoord = document.formulier.nieuwwoord.value;
+            var nieuwezin = zin.replace(woord, nieuwWoord);
+            if (woord !== zin) {
+                document.formulier.nieuwezin.value = "Dit woord is niet gevonden!"
+            } else document.formulier.nieuwezin.value = nieuwezin
+
+            console.log(woord);
+            console.log(nieuwWoord);
+            console.log(zin);
+
+
+
+        }
+    </script>
+</body>
+
+</html>

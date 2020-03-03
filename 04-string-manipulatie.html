@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Manipulatie</title>
+</head>
+
+<body>
+    <script>
+        var voornaam = "Andrea";
+        var achternaam = "Ravalli";
+        var naam = voornaam + " " + achternaam;
+        document.write("Hallo " + naam + ".");
+        var lengte = naam.length;
+        document.write("<p>Jouw naam bevat " + lengte + " karakters.</p>");
+        var filename = "\"javaScriptFrameWork\"";
+        document.write("<p>De originele filename is: " + filename + "</p>");
+        var kleineletters = filename.toLowerCase();
+        document.write("<p>De filename kan beter in kleine letters getypt worden , dus: " + kleineletters + "</p>");
+        var deel1 = kleineletters.substring(0, 11);
+        var deel2 = kleineletters.substring(11, 20);
+        document.write("<p>Als je " + kleineletters + " opsplitst, krijg je: " + deel1 + "\" en \"" + deel2 + "\"</p>")
+        var karakter = kleineletters.charAt(6);
+        document.write("<p>Het zesde karakter (volgens mensen) in " + kleineletters + " is: " + karakter + "\"</p>")
+    </script>
+
+
+    <!-- <script>
+        var gebruiker = "supergebruiker";
+        document.write("<br>substr(5,9): " + gebruiker.substr(5, 9));
+    </script>
+ -->
+</body>
+
+</html>

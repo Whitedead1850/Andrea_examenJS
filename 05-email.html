@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email</title>
+</head>
+
+<body>
+    <script>
+        var email = "jan.klaassen@mail.com";
+        var positieAt = email.indexOf("@");
+        var naam = email.substring(0, positieAt);
+
+        document.write("De naam is: \"" + naam + "\"")
+        document.write("<p>In \"" + email + "\" staat de @ op positie: " + positieAt + "</p>")
+    </script>
+
+</body>
+
+</html>
