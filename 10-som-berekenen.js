@@ -1,23 +1,29 @@
+var x = 0;
+var arr = [];
+
+
 function voegToe() {
     getal = document.formulier.getal.value;
-    var arr = []
+    arr[x] = document.getElementById("getal").value;
     if (getal == null) {
         document.formulier2.berekening.value = "U heeft niets ingevuld!"
     } else if (isNaN(getal)) {
         document.formulier2.berekening.value = "U heeft geen cijfer ingevuld!"
-    } else document.formulier2.berekening.value = getal;
+    } else document.formulier2.berekening.value = "alle cijfers " + arr + "- Juist toegevoegd: " +
+        arr[arr.length - 1];
 
-    var input = document.getElementById("getal").value;
-    arr.push(input);
-    /* var pval = ""; */
-    for (i = 0; i < arr.length; i++) {
-        /* pval = pval + arr[i] */
+    x++;
+    document.getElementById("getal").value = "";
 
-    }
-    document.getElementById("berekening").innerHTML = arr
     console.log(arr)
 }
 
 function bereken() {
+    var totaal = 0;
+    for (var i = 0; i < arr.length; i++) {
+        n = Number(arr[i])
+        totaal += n;
+    }
+    document.formulier2.berekening.value = "alle cijfers " + arr + "- Som is : " + totaal
 
 }
